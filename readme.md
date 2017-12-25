@@ -7,3 +7,4 @@ Practice with my shit on git
 4. if
 5. case
 6. for
+7. while
