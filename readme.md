@@ -8,3 +8,5 @@ Practice with my shit on git
 5. case
 6. for
 7. while
+8. series
+9. Procedures (will be placed in one file as it functions)
