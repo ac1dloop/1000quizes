@@ -1,6 +1,6 @@
 # Leave this page pls
 
-1000 Zadach po programmirovaniyu. Valedinsky
+1000 Zadach po programmirovaniyu.
 
 ## Notice this!
 
@@ -10,9 +10,9 @@ If you dont interview me. you dont need this info.
 
 ## Books in russian available here
 
-* [Part 1]() - Easy level
-* [Part 2]() - Medium
-* [Part 3]() - Super easy
+* [Part 1](https://github.com/ac1dloop/1000quizes/blob/master/1000_zadach_po_programmirovaniyu_Chast_I.pdf) - Easy level
+* [Part 2](https://github.com/ac1dloop/1000quizes/blob/master/1000_zadach_po_programmirovaniyu_Chast_II.pdf) - Medium
+* [Part 3](https://github.com/ac1dloop/1000quizes/blob/master/1000_zadach_po_programmirovaniyu_Chast_III_Tex.pdf) - Super easy
 
 ## Problems
 
