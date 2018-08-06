@@ -17,6 +17,7 @@ int main()
 	
 	vector<int>::iterator it;
 	vector<int>::iterator jt;
+	reverse(arr.begin(), arr.end());
 	for (it=arr.begin();it!=arr.end()-1;++it){
 		for (jt=it;jt!=arr.end()-1;++jt){
 			if (*it==*jt&&it!=jt){
@@ -25,6 +26,7 @@ int main()
 			}
 		}
 	}
+	reverse(arr.begin(), arr.end());
 	
 	arr.pop_back();
     
