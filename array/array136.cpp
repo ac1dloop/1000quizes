@@ -46,29 +46,31 @@ int main()
 {
 	int n;
 	cin >> n;
-	vector<Point> points;
+	vector<Point> vec1;
 	for (int i=0;i<n;++i){
 		Point t;
 		cin >> t;
-		points.push_back(t);
+		vec1.push_back(t);
 	}
+	
+	double min=DBL_MAX;
+	Point res;
 
-	double max=DBL_MIN;
-	Point res1;
-	Point res2;
-
-	for (int i=0;i<points.size();++i){
-		for (int j=i+1;j<points.size();++j){
-			double t=points[i].dist(points[j]);
-			if (t>max){
-				max=t;
-				res1=points[i];
-				res2=points[j];
+	for (int i=0;i<vec1.size();++i){
+		double sum=0;
+		for (int j=0;j<vec1.size();++j){
+			if (j!=i){
+				double t=vec1[i].dist(vec1[j]);
+				sum+=t;
 			}
+		}
+		if (sum<min){
+			min=sum;
+			res=vec1[i];
 		}
 	}
 
-	cout << res1 << res2 << "dist: " << max << endl;
+	cout << res << "dist: " << min << endl;
 
 	return 0;
 }

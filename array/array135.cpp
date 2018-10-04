@@ -44,31 +44,37 @@ using namespace std;
 
 int main()
 {
-	int n;
-	cin >> n;
-	vector<Point> points;
-	for (int i=0;i<n;++i){
+	int n1, n2;
+	cin >> n1 >> n2;
+	vector<Point> vec1;
+	vector<Point> vec2;
+	for (int i=0;i<n1;++i){
 		Point t;
 		cin >> t;
-		points.push_back(t);
+		vec1.push_back(t);
 	}
 
-	double max=DBL_MIN;
+	for (int i=0;i<n2;++i){
+		Point t;
+		cin >> t;
+		vec2.push_back(t);
+	}
+
+	double min=DBL_MAX;
 	Point res1;
 	Point res2;
 
-	for (int i=0;i<points.size();++i){
-		for (int j=i+1;j<points.size();++j){
-			double t=points[i].dist(points[j]);
-			if (t>max){
-				max=t;
-				res1=points[i];
-				res2=points[j];
+	for (auto x: vec1){
+		for (auto y: vec2){
+			double t=x.dist(y);
+			if (t<min){
+				res1=x;
+				res2=y;
 			}
 		}
 	}
 
-	cout << res1 << res2 << "dist: " << max << endl;
+	cout << res1 << res2 << "dist: " << min << endl;
 
 	return 0;
 }
