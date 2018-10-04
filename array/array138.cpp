@@ -46,32 +46,44 @@ int main()
 {
 	int n;
 	cin >> n;
-	vector<Point> points;
+	vector<Point> vec1;
 	for (int i=0;i<n;++i){
 		Point t;
 		cin >> t;
-		points.push_back(t);
+		vec1.push_back(t);
 	}
-
-	double max=DBL_MIN;
+	
 	Point res1;
 	Point res2;
+	Point res3;
+	
+	double P_min=DBL_MAX;
 
-	for (int i=0;i<points.size();++i){
-		for (int j=0;j<points.size();++j){
-			if (i==j){
+	for (int i=0;i<vec1.size();++i){
+		for (int j=0;j<vec1.size();++j){
+			if (j==i){
 				continue;
 			}
-			double t=points[i].dist(points[j]);
-			if (t>max){
-				max=t;
-				res1=points[i];
-				res2=points[j];
+			for (int k=0;k<vec1.size();++k){
+				if (k==j||k==i){
+					continue;
+				}
+				if (i!=j!=k){
+					double a=vec1[i].dist(vec1[j]);
+					double b=vec1[i].dist(vec1[k]);
+					double c=vec1[k].dist(vec1[j]);
+					if ((a+b+c)<P_min){
+						P_min=a+b+c;
+						res1=vec1[i];
+						res2=vec1[j];
+						res3=vec1[k];
+					}
+				}
 			}
 		}
 	}
 
-	cout << res1 << res2 << "dist: " << max << endl;
+	cout << res1 << res2 << res3 << " P: " << P_min << endl;
 
 	return 0;
 }

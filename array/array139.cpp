@@ -2,6 +2,7 @@
 #include <vector>
 #include <cfloat>
 #include <cmath>
+#include <algorithm>
 
 enum class quarter{
 	I,
@@ -46,32 +47,29 @@ int main()
 {
 	int n;
 	cin >> n;
-	vector<Point> points;
+	vector<Point> vec1;
 	for (int i=0;i<n;++i){
 		Point t;
 		cin >> t;
-		points.push_back(t);
+		vec1.push_back(t);
 	}
-
-	double max=DBL_MIN;
+	
 	Point res1;
 	Point res2;
+	Point res3;
+	
+	double P_min=DBL_MAX;
 
-	for (int i=0;i<points.size();++i){
-		for (int j=0;j<points.size();++j){
-			if (i==j){
-				continue;
-			}
-			double t=points[i].dist(points[j]);
-			if (t>max){
-				max=t;
-				res1=points[i];
-				res2=points[j];
-			}
-		}
+	std::sort(vec1.begin(), vec1.end(), [](const Point& a, const Point& b)->bool{
+				if (((a.x+a.y)<(b.x+b.y))||(((a.x+a.y)==(b.x+b.y))&&(a.x<b.x)))
+					return true;
+					else return false;
+			});
+
+	for (auto x: vec1){
+		cout << x << " ";
 	}
-
-	cout << res1 << res2 << "dist: " << max << endl;
+	cout << endl;
 
 	return 0;
 }
