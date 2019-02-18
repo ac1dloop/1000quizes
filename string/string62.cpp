@@ -10,13 +10,14 @@
 #include <sstream>
 #include <set>
 using namespace std;
+/* changed a little */
+const wstring alower=L"Ð°Ð±Ð²Ð³Ð´ÐµÐ¶Ð·Ð¸Ð¹ÐºÐ»Ð¼Ð½Ð¾Ð¿Ñ€ÑÑ‚ÑƒÑ„Ñ…Ñ†Ñ‡ÑˆÑ‰ÑŒÑŠÑÑŽÑ";
+const wstring aupper=L"ÐÐ‘Ð’Ð“Ð”Ð•Ð–Ð—Ð˜Ð™ÐšÐ›ÐœÐÐžÐŸÐ Ð¡Ð¢Ð£Ð¤Ð¥Ð¦Ð§Ð¨Ð©Ð¬ÐªÐ­Ð®Ð¯";
 
 int main()
 {
 	setlocale(LC_ALL, "");
 	wstring str;
-	const wstring aupper=L"ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÜÚÝÞß";
-	const wstring alower=L"àáâãäåæçèéêëìíîïðñòóôõö÷øùüúýþÿ";
 
 	wcin >> str;
 	
