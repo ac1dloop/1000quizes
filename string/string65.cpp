@@ -18,10 +18,15 @@ int main()
 {
 	setlocale(LC_ALL, "");
 	wstring str;
+	wstring num;
+	int k;
 
 	std::getline(wcin, str, L'\n');
+	std::getline(wcin, num, L'\n');
+
+	k=std::stoul(num);
 	
-	std::transform(str.begin(), str.end(), str.begin(), [](auto c){
+	std::transform(str.begin(), str.end(), str.begin(), [&k](auto c){
 			if (!::iswalpha(c))
 				return c;
 
@@ -29,9 +34,9 @@ int main()
 			size_t d2=alower.find(c);
 			
 			if (d1==string::npos){
-				c=alower[(d2+1)%31];
+				c=alower[(31+d2-k)%31];
 			} else {
-				c=aupper[(d1+1)%31];
+				c=aupper[(31+d1-k)%31];
 			}
 			return c;
 	});
