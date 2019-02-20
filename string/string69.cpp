@@ -9,9 +9,8 @@
 #include <locale>
 #include <sstream>
 #include <stack>
+#include <set>
 using namespace std;
-
-stack<size_t> st;
 
 int main()
 {
@@ -19,16 +18,27 @@ int main()
 
 	std::getline(cin, str, '\n');
 
-	for (int i=str.size()-1;i>=0;--i){
-		if (str[i]==')')
-			st.push(i);
+	set<size_t> st_left;
+	set<size_t> st_right;
+
+	for (int i=0;i<str.size();++i){
 		if (str[i]=='(')
-			st.pop();
+			st_left.insert(i);
+		if (str[i]==')')
+			st_right.insert(i);
 	}
 
-	if (st.size()==0)
-		cout << 0 << endl;
-	else cout << st.top();
+	if (st_right.size()!=st_left.size())
+		cout << -1 << endl;
+
+	set<size_t>::iterator itl=st_left.begin();
+	set<size_t>::iterator itr=st_right.begin();
+	for (;itl!=st_left.end()&&itr!=st_right.end();++itl, ++itr){
+		if (*itl>*itr)
+			cout << (*itr)+1 << endl;
+	}
+
+	cout << 0 << endl;
 
 	return 0;
 }
