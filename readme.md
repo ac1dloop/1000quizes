@@ -5,14 +5,14 @@
 ## Notice this!
 
 ```
-If you dont interview me. you dont need this info.
+It's a stupid ass repository just to commit something
 ```
 
-## Books in russian available here
+## Books are available here
 
-* [Part 1](https://github.com/ac1dloop/1000quizes/blob/master/1000_zadach_po_programmirovaniyu_Chast_I.pdf) - Easy level
-* [Part 2](https://github.com/ac1dloop/1000quizes/blob/master/1000_zadach_po_programmirovaniyu_Chast_II.pdf) - Medium
-* [Part 3](https://github.com/ac1dloop/1000quizes/blob/master/1000_zadach_po_programmirovaniyu_Chast_III_Tex.pdf) - Super easy
+* [Part 1](https://github.com/ac1dloop/1000quizes/blob/master/1000_zadach_po_programmirovaniyu_Chast_I.pdf)
+* [Part 2](https://github.com/ac1dloop/1000quizes/blob/master/1000_zadach_po_programmirovaniyu_Chast_II.pdf)
+* [Part 3](https://github.com/ac1dloop/1000quizes/blob/master/1000_zadach_po_programmirovaniyu_Chast_III_Tex.pdf)
 
 ## Problems
 
